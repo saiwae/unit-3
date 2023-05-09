@@ -3,8 +3,173 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        .red{
+            background: red;
+        }
+        .green{
+            background: green;
+        }
+        .blue{
+            background: blue;
+        }
+        .yellow{
+            background: yellow;
+        }
+        .lavender{
+            background: lavender;
+        }
+        .maroon{
+            background: maroon;
+        }
+        .pink{
+            color: pink;
+        }
+        .teal{
+            color: teal;
+        }
+        .purple{
+            color: purple;
+        }
+        .brown{
+            color: brown;
+        }
+        .white{
+            color: white;
+        }
+        .orange{
+            color: orange;
+        }
+    </style>
 </head>
 <body>
+<div class="container">
+    <div class="content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed sed risus pretium quam. Nunc mattis enim ut tellus elementum sagittis. Quam nulla porttitor massa id neque aliquam vestibulum morbi blandit.</p>
+        <div class="row">
+            <h3>Background</h3>
+            <button id="1">RED</button>
+            <button id="2">GREEN</button>
+            <button id="3">BLUE</button>
+            <button id="7">YELLOW</button>
+            <button id="8">LAVENDER</button>
+            <button id="9">MAROON</button>
+        </div>
+        <div class="row">
+            <h3>Text</h3>
+            <button id="4">PINK</button>
+            <button id="5">TEAL</button>
+            <button id="6">PURPLE</button>
+            <button id="10">BROWN</button>
+            <button id="11">WHITE</button>
+            <button id="12">ORANGE</button>
+        </div>
+        <br>
+        <br>
+        <button id="clear">CLEAR</button>
+    </div>
+</div>
+<script>
+    const content = document.querySelector('.content');
+    const red = document.getElementById('1');
+    const green = document.getElementById('2');
 
+    const blue = document.getElementById('3');
+    const yellow = document.getElementById('7');
+    const lavender = document.getElementById('8');
+    const maroon = document.getElementById('9');
+
+    const pink = document.getElementById('4');
+    const teal = document.getElementById('5');
+    const purple = document.getElementById('6');
+    const brown = document.getElementById('10');
+    const white = document.getElementById('11');
+    const orange = document.getElementById('12');
+
+    const clearButton = document.getElementById('clear');
+
+    red.addEventListener('click', function(e){
+        removeBGColor();
+        content.classList.add('red');
+    });
+
+    green.addEventListener('click', function(e){
+        removeBGColor();
+        content.classList.add('green');
+    });
+
+    blue.addEventListener('click', function(e){
+        removeBGColor();
+        content.classList.add('blue');
+    });
+
+    yellow.addEventListener('click', function(e){
+        removeBGColor();
+        content.classList.add('yellow');
+    });
+
+    lavender.addEventListener('click', function(e){
+        removeBGColor();
+        content.classList.add('lavender');
+    });
+
+    maroon.addEventListener('click', function(e){
+        removeBGColor();
+        content.classList.add('maroon');
+    });
+
+    pink.addEventListener('click', function(e){
+        removeTextColor();
+        content.classList.add('pink');
+    });
+
+    teal.addEventListener('click', function(e){
+        removeTextColor();
+        content.classList.add('teal');
+    });
+
+    purple.addEventListener('click', function(e){
+        removeTextColor();
+        content.classList.add('purple');
+    });
+
+    brown.addEventListener('click', function(e){
+        removeTextColor();
+        content.classList.add('browm');
+    });
+
+    white.addEventListener('click', function(e){
+        removeTextColor();
+        content.classList.add('white');
+    });
+
+    orange.addEventListener('click', function(e){
+        removeTextColor();
+        content.classList.add('orange');
+    });
+
+    clearButton.addEventListener('click', function(e){
+        removeTextColor();
+        removeBGColor();
+    });
+
+    function removeBGColor(){
+        content.classList.remove('red');
+        content.classList.remove('green');
+        content.classList.remove('blue');
+        content.classList.remove('yellow');
+        content.classList.remove('lavender');
+        content.classList.remove('maroon');
+    }
+
+    function removeTextColor(){
+        content.classList.remove('pink');
+        content.classList.remove('teal');
+        content.classList.remove('purple');
+        content.classList.remove('black');
+        content.classList.remove('white');
+        content.classList.remove('orange');
+    }
+</script>
 </body>
 </html>
