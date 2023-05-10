@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Updated Color Picker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div class="content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed sed risus pretium quam. Nunc mattis enim ut tellus elementum sagittis. Quam nulla porttitor massa id neque aliquam vestibulum morbi blandit.</p>
+        <div class="row">
+            <h3>Background</h3>
+            <input type="color" id="bg" value="#fff">
+        </div>
+        <div class="row">
+            <h3>Text</h3>
+            <input type="color" id="txt">
+        </div>
+        <br>
+        <br>
+        <button id="clear">CLEAR</button>
+    </div>
+</div>
+<script>
+    const content = document.querySelector('.content');
+    const bg = document.getElementById('bg');
+    const txt = document.getElementById('txt');
+    const clear = document.getElementById('clear');
+
+    bg.addEventListener('change', function(e){
+        content.style.backgroundColor = e.target.value;
+    });
+
+    txt.addEventListener('change', function(e){
+        content.style.color = e.target.value;
+    });
+
+    clear.addEventListener('click', function(e){
+        content.style.backgroundColor = 'white';
+        bg.value = '#fff';
+        content.stylecolor = 'black';
+        txt.value = '#000'
+    })
+</script>
+</body>
+</html>
