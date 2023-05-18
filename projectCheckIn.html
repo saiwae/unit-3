@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project Check In</title>
+    <style>
+
+    </style>
+</head>
+<body>
+<h2>5-Function Calculator</h2>
+<div>
+    <label for="num1">Number 1</label>
+    <input name="number1" type="text" size=10 id='num1'/>
+    <label for="num2">Number 2</label>
+    <input name="number2" type="text" size=10 id='num2'/>
+    <label for="result">Result</label>
+    <input type="text" id='result' readonly >
+</div>
+<br>
+<div>
+    <button onclick="showresult('1')">+</button>
+    <button onclick="showresult('2')">-</button>
+    <button onclick="showresult('3')">*</button>
+    <button onclick="showresult('4')">/</button>
+    <button onclick="showresult('5')">%</button>
+</div>
+<script>
+
+    function showresult(choice){
+        let n1 = parseFloat(document.getElementById('num1').value);
+        let n2 = parseFloat(document.getElementById('num2').value);
+        let r;
+        let c = choice;
+
+        switch(c){
+            case '1':
+                r=n1+n2;
+                break;
+            case '2':
+                r=n1-n2;
+                break;
+            case '3':
+                r=n1*n2;
+                break;
+            case '4':
+                r=n1/n2;
+                break;
+            case '5':
+                r=n2*100/n1;
+                break;
+            default:
+                break;
+        }
+        document.getElementById('result').value=r;
+    }
+</script>
+</body>
+</html>
