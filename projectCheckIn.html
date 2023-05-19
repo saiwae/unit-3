@@ -75,7 +75,7 @@
     }
     add.addEventListener('click', addItem);
 
-    function addItem(){
+    function addItem1(){
 
         let newElement = document.createElement('li');
         newElement.innerHTML = `${Number(n1.value)} - ${Number(n2.value)} = ${Number(n1.value)-Number(n2.value)}`;
@@ -83,9 +83,9 @@
         n1.value = "";
         n2.value = "";
     }
-    subtract.addEventListener('click', addItem);
+    subtract.addEventListener('click', addItem1);
 
-    function addItem(){
+    function addItem2(){
 
         let newElement = document.createElement('li');
         newElement.innerHTML = `${Number(n1.value)} * ${Number(n2.value)} = ${Number(n1.value)*Number(n2.value)}`;
@@ -93,9 +93,9 @@
         n1.value = "";
         n2.value = "";
     }
-    multiply.addEventListener('click', addItem);
+    multiply.addEventListener('click', addItem2);
 
-    function addItem(){
+    function addItem3(){
 
         let newElement = document.createElement('li');
         newElement.innerHTML = `${Number(n1.value)} / ${Number(n2.value)} = ${Number(n1.value)/Number(n2.value)}`;
@@ -103,9 +103,9 @@
         n1.value = "";
         n2.value = "";
     }
-    divide.addEventListener('click', addItem);
+    divide.addEventListener('click', addItem3);
 
-    function addItem(){
+    function addItem4(){
 
         let newElement = document.createElement('li');
         newElement.innerHTML = `${Number(n1.value)} % ${Number(n2.value)} = ${Number(n1.value)%Number(n2.value)}`;
@@ -113,7 +113,7 @@
         n1.value = "";
         n2.value = "";
     }
-    eung.addEventListener('click', addItem);
+    eung.addEventListener('click', addItem4);
 </script>
 </body>
 </html>
