@@ -22,9 +22,10 @@
     <button id="3">*</button>
     <button id="4">/</button>
     <button id="5">%</button>
+    <button id="clear">Clear</button>
 </div>
 <div>
-    <ul>
+    <ul id="list">
     </ul>
 </div>
 <script>
@@ -114,6 +115,12 @@
         n2.value = "";
     }
     eung.addEventListener('click', addItem4);
+
+    clear.addEventListener('click', function (e){
+        n1.value = "";
+        n2.value = "";
+        history.textContent = "";
+    });
 </script>
 </body>
 </html>
