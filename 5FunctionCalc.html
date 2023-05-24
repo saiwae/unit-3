@@ -2,23 +2,88 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Project Check In</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Calculator</title>
+
+    <style>
+        html {
+            background-color: #b8b695;
+            background-image:  radial-gradient(#000000 2px, transparent 2px), radial-gradient(#000000 2px, #fafafa 2px);
+            background-size: 80px 80px;
+            background-position: 0 0,40px 40px;
+            margin-top: 2em;
+            margin-left: 2em;
+        }
+        @font-face {
+            src: url(https://dl.dropbox.com/s/ktlx5w7t8gk42nb/SakeMoru-Regular.ttf);
+            font-family: sake;
+        }
+
+        sake {
+            font-family: sake;
+        }
+        .numbers{
+            font-size: 12px;
+        }
+
+        @font-face {
+            src: url(https://dl.dropbox.com/s/hfc6fjqu9kkxbt5/Sweet%20Creamy.ttf);
+            font-family: creamy;
+        }
+
+        creamy {
+            font-family: creamy;
+        }
+        @font-face {
+            font-family: pixel;
+            src: url(https://dl.dropbox.com/s/kmhe7d3n18vdz5e/w95fa.woff?dl=0);
+        }
+
+        pixel {
+            font-family: pixel;
+        }
+        label{
+            font-family: pixel;
+            font-size: 1.5em;
+            color: #000;
+        }
+        h1 {
+            font-family: creamy;
+            font-size: 2em;
+            color: #ffdfea;
+            -webkit-text-stroke-width: .5px;
+            -webkit-text-stroke-color: #000;
+        }
+        button {
+            font-family: pixel;
+            font-size: 1em;
+            color: #000;
+            background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(253,229,247,1) 80%);
+            border-radius: 10px;
+            border: 1px solid black;
+            margin: 0px 10px 0px 10px;
+        }
+        .num1 {
+            margin-right: 15px;
+        }
+        .nums {
+            margin-right: 5px;
+        }
+    </style>
 </head>
 <body>
 <h1>5-Function Calculator</h1>
 <div class="numbers">
-    <label for="num1">Number 1</label>
-    <input name="number1" type="text" size=10 id='num1'/>
-    <label for="num2">Number 2</label>
+    <label for="num1" class="nums">Number 1</label>
+    <input name="number1" type="text" size=10 id='num1' class="num1"/>
+    <label for="num2" class="nums">Number 2</label>
     <input name="number2" type="text" size=10 id='num2'/>
 </div>
 <br>
 <div>
     <button id="1">+</button>
     <button id="2">-</button>
-    <button id="3">*</button>
-    <button id="4">/</button>
+    <button id="3">×</button>
+    <button id="4">÷</button>
     <button id="5">%</button>
     <button id="clear">Clear</button>
 </div>
@@ -87,7 +152,7 @@
     function addItem2(){
 
         let newElement = document.createElement('li');
-        newElement.innerHTML = `${Number(n1.value)} * ${Number(n2.value)} = ${Number(n1.value)*Number(n2.value)}`;
+        newElement.innerHTML = `${Number(n1.value)} × ${Number(n2.value)} = ${Number(n1.value)*Number(n2.value)}`;
         history.appendChild(newElement)
         n1.value = "";
         n2.value = "";
@@ -97,7 +162,7 @@
     function addItem3(){
 
         let newElement = document.createElement('li');
-        newElement.innerHTML = `${Number(n1.value)} / ${Number(n2.value)} = ${Number(n1.value)/Number(n2.value)}`;
+        newElement.innerHTML = `${Number(n1.value)} ÷ ${Number(n2.value)} = ${Number(n1.value)/Number(n2.value)}`;
         history.appendChild(newElement)
         n1.value = "";
         n2.value = "";
